@@ -13,6 +13,7 @@ A VSCode extension that enhances your coding experience by providing preset shor
 ## Keybindings
 
 ### Window Navigation
+
 - `Ctrl + h` - Navigate to the left window (Normal mode)
 - `Ctrl + l` - Navigate to the right window (Normal mode)
 - `Ctrl + k` - Navigate to the window above (Normal mode)
@@ -23,9 +24,11 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `Ctrl + c` - Close active editor (except in Insert mode)
 
 ### File Explorer
+
 - `Ctrl + n` - Focus file explorer
 - `a` - Create new file
 - `Shift + a` - Create new folder
+- `o` - Open file/folder but not focus
 - `r` - Rename file/folder
 - `y` - Copy file/folder
 - `p` - Paste file/folder
@@ -36,6 +39,7 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `Enter` - Open file or toggle folder
 
 ### Editor Navigation and Actions
+
 - `Shift + j` - Move lines down (Visual Line mode)
 - `Shift + k` - Move lines up (Visual Line mode)
 - `Shift + k` - Show hover (Normal mode)
@@ -43,6 +47,7 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `Ctrl + p` - Show parameter hints (Insert mode)
 
 ### Quick Input/Suggestion Navigation
+
 - `Ctrl + j` - Navigate to next item in:
   - File picker
   - Code actions
@@ -57,6 +62,7 @@ A VSCode extension that enhances your coding experience by providing preset shor
   - Search
 
 ### Hover Navigation
+
 - `Ctrl + u` - Page up in hover
 - `Ctrl + d` - Page down in hover
 - `k` - Scroll up in hover
@@ -65,6 +71,7 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `h` - Scroll left in hover
 
 ### Code Actions
+
 - `f` - EasyMotion
 - `H` - Move to beginning of line
 - `L` - Move to end of line
@@ -108,11 +115,13 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `] + m` - Jump Next bookmark
 
 ### Normal Mode Special Keys
+
 - `:` - Show commands
 - `;` - Quick open
 - `jk` - Exit Insert mode (when typed quickly)
 
 ### Vim Configuration
+
 - Leader key set to `<space>`
 - Enabled features:
   - Show mode name
@@ -154,3 +163,5 @@ Feel free to submit issues and enhancement requests on the GitHub repository.
 ---
 
 **Note**: This extension is designed to enhance your Vim experience in VSCode while maintaining compatibility with VSCode's native features.
+
+**TIP**: If you don't like some shortcut keys, you can open keybindings.json or use `leader + f + k` to modify them. Enjoy it!😃

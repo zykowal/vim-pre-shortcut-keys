@@ -3,6 +3,10 @@
   "displayName": "Vim Pre Shortcut Keys",
   "description": "Preset some shortcut keys to make vscode like vim/neovim",
   "publisher": "zykowal",
+  "repository": {
+    "url": "https://github.com/zykowal/vim-pre-shortcut-keys.git"
+  },
+  "icon": "assets/logo.webp",
   "author": {
     "name": "zykowal",
     "url": "https://github.com/zykowal"
@@ -19,7 +23,9 @@
     "neovim"
   ],
   "categories": [
-    "Keymaps"
+    "Keymaps",
+    "Extension Packs",
+    "Other"
   ],
   "extensionDependencies": [
     "vscodevim.vim",
@@ -135,6 +141,10 @@
       },
       {
         "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+      },
+      {
+        "key": "ctrl+j",
         "command": "workbench.action.quickOpenNavigateNextInFilePicker",
         "when": "inFilesPicker && inQuickOpen"
       },
@@ -157,6 +167,11 @@
         "key": "ctrl+j",
         "command": "search.focus.nextInputBox",
         "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
       },
       {
         "key": "ctrl+k",
@@ -923,6 +938,8 @@
       ],
       "vim.handleKeys": {
         "<C-n>": false,
+        "<C-j>": false,
+        "<C-k>": false,
         "<C-d>": true
       },
       "extensions.experimental.affinity": {
