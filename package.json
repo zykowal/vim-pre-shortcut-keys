@@ -1,0 +1,933 @@
+{
+  "name": "vim-pre-shortcut-keys",
+  "displayName": "Vim Pre Shortcut Keys",
+  "description": "Preset some shortcut keys to make vscode like vim/neovim",
+  "publisher": "zykowal",
+  "author": {
+    "name": "zykowal",
+    "url": "https://github.com/zykowal"
+  },
+  "license": "MIT",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "keywords": [
+    "keymap",
+    "keybindings",
+    "vim",
+    "neovim"
+  ],
+  "categories": [
+    "Keymaps"
+  ],
+  "extensionDependencies": [
+    "vscodevim.vim",
+    "silesky.toggle-boolean",
+    "alefragnani.bookmarks"
+  ],
+  "extensionPack": [
+    "vscodevim.vim",
+    "silesky.toggle-boolean",
+    "alefragnani.bookmarks"
+  ],
+  "pricing": "Free",
+  "contributes": {
+    "keybindings": [
+      {
+        "key": "ctrl-h",
+        "command": "workbench.action.navigateLeft",
+        "when": "vim.mode == 'Normal' && !inputFocus"
+      },
+      {
+        "key": "ctrl-l",
+        "command": "workbench.action.navigateRight",
+        "when": "vim.mode == 'Normal' && !inputFocus"
+      },
+      {
+        "key": "ctrl-k",
+        "command": "workbench.action.navigateUp",
+        "when": "vim.mode == 'Normal' && !inputFocus"
+      },
+      {
+        "key": "ctrl-j",
+        "command": "workbench.action.navigateDown",
+        "when": "vim.mode == 'Normal' && !inputFocus"
+      },
+      {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility"
+      },
+      {
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "ctrl+n",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "explorer.newFile",
+        "key": "a",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "command": "filesExplorer.copy",
+        "key": "y",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "command": "filesExplorer.paste",
+        "key": "p",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "command": "deleteFile",
+        "key": "d",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "s",
+        "command": "explorer.openToSide",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "shift-s",
+        "command": "workbench.action.splitEditorDown",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+      },
+      {
+        "key": "enter",
+        "command": "explorer.openAndPassFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceIsFolder && !inputFocus"
+      },
+      {
+        "key": "enter",
+        "command": "list.toggleExpand",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
+      },
+      {
+        "key": "shift-j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "vim.mode == 'VisualLine' && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift-k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "vim.mode == 'VisualLine' && editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "shift-k",
+        "command": "editor.action.showHover",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "selectNextCodeAction",
+        "when": "codeActionMenuVisible"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "quickInput.next",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "search.focus.nextInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "search.focus.previousInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "search.action.focusSearchFromResults",
+        "when": "accessibilityModeEnabled && searchViewletVisible || firstMatchFocus && searchViewletVisible"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "quickInput.previous",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+      },
+      {
+        "key": "ctrl+i",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible && vim.mode == 'Insert'"
+      },
+      {
+        "key": "ctrl+p",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus && vim.mode == 'Insert'"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "editor.action.pageUpHover",
+        "when": "editorHoverFocused"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "editor.action.pageDownHover",
+        "when": "editorHoverFocused"
+      },
+      {
+        "key": "k",
+        "command": "editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+      },
+      {
+        "key": "j",
+        "command": "editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+      },
+      {
+        "key": "l",
+        "command": "editor.action.scrollRightHover",
+        "when": "editorHoverFocused"
+      },
+      {
+        "key": "h",
+        "command": "editor.action.scrollLeftHover",
+        "when": "editorHoverFocused"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "notebook.cell.cursorPageDown",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "list.focusPageDown",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "quickInput.pageNext",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "selectNextPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+      },
+      {
+        "key": "ctrl+d",
+        "command": "workbench.action.interactivePlayground.pageDown",
+        "when": "interactivePlaygroundFocus && !editorTextFocus"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "notebook.cell.cursorPageUp",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "list.focusPageUp",
+        "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "quickInput.pagePrevious",
+        "when": "inQuickInput && quickInputType == 'quickPick'"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "selectPrevPageSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+      },
+      {
+        "key": "ctrl+u",
+        "command": "workbench.action.interactivePlayground.pageUp",
+        "when": "interactivePlaygroundFocus && !editorTextFocus"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "widgetNavigation.focusNext",
+        "when": "inputFocus && navigableContainerFocused || navigableContainerFocused && treestickyScrollFocused || navigableContainerFocused && !listFocus || navigableContainerFocused && listScrollAtBoundary == 'both' || navigableContainerFocused && listScrollAtBoundary == 'bottom'"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "widgetNavigation.focusPrevious",
+        "when": "inputFocus && navigableContainerFocused || navigableContainerFocused && treestickyScrollFocused || navigableContainerFocused && !listFocus || navigableContainerFocused && listScrollAtBoundary == 'both' || navigableContainerFocused && listScrollAtBoundary == 'top'"
+      },
+      {
+        "key": "ctrl+j",
+        "command": "showNextParameterHint",
+        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "showPrevParameterHint",
+        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+      },
+      {
+        "key": "o",
+        "command": "revealReference",
+        "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+      },
+      {
+        "key": "ctrl+'",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+      },
+      {
+        "key": "ctrl+c",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "vim.mode != 'Insert'"
+      },
+      {
+        "key": "alt+b",
+        "command": "-extension.toggleBool",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configurationDefaults": {
+      "vim.leader": "<space>",
+      "vim.showmodename": true,
+      "vim.incsearch": true,
+      "vim.easymotion": true,
+      "vim.replaceWithRegister": true,
+      "vim.smartRelativeLine": true,
+      "vim.surround": true,
+      "vim.useCtrlKeys": true,
+      "vim.smartcase": true,
+      "vim.ignorecase": true,
+      "vim.foldfix": true,
+      "vim.highlightedyank.enable": true,
+      "vim.highlightedyank.textColor": "white",
+      "vim.useSystemClipboard": true,
+      "vim.hlsearch": true,
+      "vim.normalModeKeyBindings": [
+        {
+          "before": [
+            ":"
+          ],
+          "commands": [
+            "workbench.action.showCommands"
+          ],
+          "silent": true
+        },
+        {
+          "before": [
+            ";"
+          ],
+          "commands": [
+            "workbench.action.quickOpen"
+          ],
+          "silent": true
+        }
+      ],
+      "vim.insertModeKeyBindings": [
+        {
+          "before": [
+            "<c-j>"
+          ],
+          "after": [
+            "<CR>"
+          ]
+        },
+        {
+          "before": [
+            "j",
+            "k"
+          ],
+          "after": [
+            "<Esc>"
+          ]
+        }
+      ],
+      "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": [
+            "|"
+          ],
+          "after": [
+            "<c-w>",
+            "v"
+          ]
+        },
+        {
+          "before": [
+            "\\"
+          ],
+          "after": [
+            "<c-w>",
+            "s"
+          ]
+        },
+        {
+          "before": [
+            "<c-h>"
+          ],
+          "after": [
+            "<c-w>",
+            "h"
+          ]
+        },
+        {
+          "before": [
+            "<c-l>"
+          ],
+          "after": [
+            "<c-w>",
+            "l"
+          ]
+        },
+        {
+          "before": [
+            "<c-j>"
+          ],
+          "after": [
+            "<c-w>",
+            "j"
+          ]
+        },
+        {
+          "before": [
+            "<c-k>"
+          ],
+          "after": [
+            "<c-w>",
+            "k"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "f",
+            "w"
+          ],
+          "commands": [
+            "workbench.action.findInFiles"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "f",
+            "r"
+          ],
+          "commands": [
+            "workbench.action.replaceInFiles"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "f",
+            "k"
+          ],
+          "commands": [
+            "workbench.action.openGlobalKeybindings"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "c"
+          ],
+          "commands": [
+            "workbench.action.closeActiveEditor"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "b",
+            "l"
+          ],
+          "commands": [
+            "workbench.action.closeEditorsToTheLeft"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "b",
+            "r"
+          ],
+          "commands": [
+            "workbench.action.closeEditorsToTheRight"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "b",
+            "C"
+          ],
+          "commands": [
+            "workbench.action.closeAllEditors"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "b",
+            "c"
+          ],
+          "commands": [
+            "workbench.action.closeOtherEditors"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "r",
+            "e"
+          ],
+          "commands": [
+            "editor.action.rename"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "r",
+            "f"
+          ],
+          "commands": [
+            "renameFile"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "w"
+          ],
+          "commands": [
+            ":w!"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "W"
+          ],
+          "commands": [
+            "saveAll"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "q"
+          ],
+          "commands": [
+            ":wq!"
+          ]
+        },
+        {
+          "before": [
+            "<c-u>"
+          ],
+          "after": [
+            "<c-u>",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "before": [
+            "<c-d>"
+          ],
+          "after": [
+            "<c-d>",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "s",
+            "c"
+          ],
+          "commands": [
+            ":nohl"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "l"
+          ],
+          "commands": [
+            "workbench.action.nextEditor"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "h"
+          ],
+          "commands": [
+            "workbench.action.previousEditor"
+          ]
+        },
+        {
+          "before": [
+            "f"
+          ],
+          "after": [
+            "<leader>",
+            "<leader>",
+            "s"
+          ]
+        },
+        {
+          "before": [
+            "[",
+            "d"
+          ],
+          "commands": [
+            "editor.action.marker.prev"
+          ]
+        },
+        {
+          "before": [
+            "]",
+            "d"
+          ],
+          "commands": [
+            "editor.action.marker.next"
+          ]
+        },
+        {
+          "before": [
+            "<leader>",
+            "a"
+          ],
+          "commands": [
+            "editor.action.quickFix"
+          ]
+        },
+        {
+          "before": [
+            "H"
+          ],
+          "after": [
+            "^"
+          ]
+        },
+        {
+          "before": [
+            "L"
+          ],
+          "after": [
+            "$"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "i"
+          ],
+          "commands": [
+            "extension.toggleBool"
+          ]
+        },
+        {
+          "before": [
+            "n"
+          ],
+          "after": [
+            "n",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "before": [
+            "N"
+          ],
+          "after": [
+            "N",
+            "z",
+            "z"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "d"
+          ],
+          "commands": [
+            "editor.action.revealDefinition"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "p",
+            "d"
+          ],
+          "commands": [
+            "editor.action.peekDefinition"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "I"
+          ],
+          "commands": [
+            "editor.action.goToImplementation"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "p",
+            "I"
+          ],
+          "commands": [
+            "editor.action.peekImplementation"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "D"
+          ],
+          "commands": [
+            "editor.action.revealDeclaration"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "r"
+          ],
+          "commands": [
+            "editor.action.goToReferences"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "R"
+          ],
+          "commands": [
+            "references-view.findReferences"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "t"
+          ],
+          "commands": [
+            "editor.action.goToTypeDefinition"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "p",
+            "t"
+          ],
+          "commands": [
+            "editor.action.peekTypeDefinition"
+          ]
+        },
+        {
+          "before": [
+            "g",
+            "L"
+          ],
+          "commands": [
+            "workbench.actions.view.problems"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "m",
+            "a"
+          ],
+          "commands": [
+            "bookmarks.toggle"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "m",
+            "l"
+          ],
+          "commands": [
+            "bookmarks.list"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "m",
+            "L"
+          ],
+          "commands": [
+            "bookmarks.listFromAllFiles"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "m",
+            "c"
+          ],
+          "commands": [
+            "bookmarks.clear"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "m",
+            "C"
+          ],
+          "commands": [
+            "bookmarks.clearFromAllFiles"
+          ]
+        },
+        {
+          "before": [
+            "leader",
+            "m",
+            "r"
+          ],
+          "commands": [
+            "bookmarks.refresh"
+          ]
+        },
+        {
+          "before": [
+            "[",
+            "m"
+          ],
+          "commands": [
+            "bookmarks.jumpToPrevious"
+          ]
+        },
+        {
+          "before": [
+            "]",
+            "m"
+          ],
+          "commands": [
+            "bookmarks.jumpToNext"
+          ]
+        }
+      ],
+      "vim.visualModeKeyBindingsNonRecursive": [
+        {
+          "before": [
+            "H"
+          ],
+          "after": [
+            "^"
+          ]
+        },
+        {
+          "before": [
+            "L"
+          ],
+          "after": [
+            "$"
+          ]
+        }
+      ],
+      "vim.operatorPendingModeKeyBindings": [
+        {
+          "before": [
+            "H"
+          ],
+          "after": [
+            "^"
+          ]
+        },
+        {
+          "before": [
+            "L"
+          ],
+          "after": [
+            "$"
+          ]
+        }
+      ],
+      "vim.visualModeKeyBindings": [
+        {
+          "before": [
+            ">"
+          ],
+          "commands": [
+            "editor.action.indentLines"
+          ]
+        },
+        {
+          "before": [
+            "<"
+          ],
+          "commands": [
+            "editor.action.outdentLines"
+          ]
+        }
+      ],
+      "vim.operatorPendingModeKeyBindingsNonRecursive": [
+        {
+          "before": [
+            "("
+          ],
+          "after": [
+            "i("
+          ]
+        }
+      ],
+      "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-d>": true
+      },
+      "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+      }
+    }
+  }
+}
