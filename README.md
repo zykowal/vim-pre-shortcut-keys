@@ -145,6 +145,56 @@ MIT
 
 zykowal - [GitHub](https://github.com/zykowal)
 
+## Acknowledgments
+
+**Work with other plugins to get more powerful 🚀**
+
+- [Toggle Boolean](https://marketplace.visualstudio.com/items?itemName=silesky.toggle-boolean)
+
+```json
+{
+  "before": ["leader", "i"],
+  "commands": ["extension.toggleBool"]
+}
+```
+
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.bookmarks)
+
+```json
+{
+  "before": [ "leader", "m", "a" ],
+  "commands": [ "bookmarks.toggle" ]
+},
+{
+  "before": [ "leader", "m", "l" ],
+  "commands": [ "bookmarks.list" ]
+},
+{
+  "before": [ "leader", "m", "L" ],
+  "commands": [ "bookmarks.listFromAllFiles" ]
+},
+{
+  "before": [ "leader", "m", "c" ],
+  "commands": [ "bookmarks.clear" ]
+},
+{
+  "before": [ "leader", "m", "C" ],
+  "commands": [ "bookmarks.clearFromAllFiles" ]
+},
+{
+  "before": [ "leader", "m", "r" ],
+  "commands": [ "bookmarks.refresh" ]
+},
+{
+  "before": [ "[", "m" ],
+  "commands": [ "bookmarks.jumpToPrevious" ]
+},
+{
+  "before": [ "]", "m" ],
+  "commands": [ "bookmarks.jumpToNext" ]
+}
+```
+
 ## Contributing
 
 Feel free to submit issues and enhancement requests on the GitHub repository.

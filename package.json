@@ -309,6 +309,16 @@
         "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
       },
       {
+        "key": "ctrl+j",
+        "command": "-editor.action.joinLines",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+      },
+      {
         "key": "o",
         "command": "revealReference",
         "when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
