@@ -104,15 +104,6 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `leader + s + c` - No highlight
 - `leader + l` - Next Editor
 - `leader + h` - Previous Editor
-- `leader + i` - Toggle boolean
-- `leader + m + a` - Toggle bookmarks
-- `leader + m + l` - Bookmarks list
-- `leader + m + L` - All bookmarks list
-- `leader + m + c` - Clear bookmarks
-- `leader + m + C` - Clear all bookmarks
-- `leader + m + r` - Refresh bookmarks
-- `[ + m` - Jump Previous bookmark
-- `] + m` - Jump Next bookmark
 
 ### Normal Mode Special Keys
 
@@ -139,8 +130,6 @@ A VSCode extension that enhances your coding experience by providing preset shor
 This extension depends on the following VSCode extensions:
 
 - [Vim (vscodevim.vim)](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
-- [Toggle Boolean (silesky.toggle-boolean)](https://marketplace.visualstudio.com/items?itemName=silesky.toggle-boolean)
-- [Bookmarks (alefragnani.bookmarks)](https://marketplace.visualstudio.com/items?itemName=alefragnani.bookmarks)
 
 ## Installation
 

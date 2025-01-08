@@ -12,7 +12,7 @@
     "url": "https://github.com/zykowal"
   },
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -24,18 +24,13 @@
   ],
   "categories": [
     "Keymaps",
-    "Extension Packs",
     "Other"
   ],
   "extensionDependencies": [
-    "vscodevim.vim",
-    "silesky.toggle-boolean",
-    "alefragnani.bookmarks"
+    "vscodevim.vim"
   ],
   "extensionPack": [
-    "vscodevim.vim",
-    "silesky.toggle-boolean",
-    "alefragnani.bookmarks"
+    "vscodevim.vim"
   ],
   "pricing": "Free",
   "contributes": {
@@ -327,11 +322,6 @@
         "key": "ctrl+c",
         "command": "workbench.action.closeActiveEditor",
         "when": "vim.mode != 'Insert'"
-      },
-      {
-        "key": "alt+b",
-        "command": "-extension.toggleBool",
-        "when": "editorTextFocus"
       }
     ],
     "configurationDefaults": {
@@ -673,15 +663,6 @@
         },
         {
           "before": [
-            "leader",
-            "i"
-          ],
-          "commands": [
-            "extension.toggleBool"
-          ]
-        },
-        {
-          "before": [
             "n"
           ],
           "after": [
@@ -792,84 +773,6 @@
           "commands": [
             "workbench.actions.view.problems"
           ]
-        },
-        {
-          "before": [
-            "leader",
-            "m",
-            "a"
-          ],
-          "commands": [
-            "bookmarks.toggle"
-          ]
-        },
-        {
-          "before": [
-            "leader",
-            "m",
-            "l"
-          ],
-          "commands": [
-            "bookmarks.list"
-          ]
-        },
-        {
-          "before": [
-            "leader",
-            "m",
-            "L"
-          ],
-          "commands": [
-            "bookmarks.listFromAllFiles"
-          ]
-        },
-        {
-          "before": [
-            "leader",
-            "m",
-            "c"
-          ],
-          "commands": [
-            "bookmarks.clear"
-          ]
-        },
-        {
-          "before": [
-            "leader",
-            "m",
-            "C"
-          ],
-          "commands": [
-            "bookmarks.clearFromAllFiles"
-          ]
-        },
-        {
-          "before": [
-            "leader",
-            "m",
-            "r"
-          ],
-          "commands": [
-            "bookmarks.refresh"
-          ]
-        },
-        {
-          "before": [
-            "[",
-            "m"
-          ],
-          "commands": [
-            "bookmarks.jumpToPrevious"
-          ]
-        },
-        {
-          "before": [
-            "]",
-            "m"
-          ],
-          "commands": [
-            "bookmarks.jumpToNext"
-          ]
         }
       ],
       "vim.visualModeKeyBindingsNonRecursive": [
@@ -940,6 +843,7 @@
         "<C-n>": false,
         "<C-j>": false,
         "<C-k>": false,
+        "<C-p>": false,
         "<C-d>": true
       },
       "extensions.experimental.affinity": {
