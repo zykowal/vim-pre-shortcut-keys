@@ -12,7 +12,7 @@
     "url": "https://github.com/zykowal"
   },
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -327,11 +327,6 @@
         "key": "ctrl+'",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
-      },
-      {
-        "key": "ctrl+c",
-        "command": "workbench.action.closeActiveEditor",
-        "when": "vim.mode != 'Insert'"
       }
     ],
     "configurationDefaults": {
