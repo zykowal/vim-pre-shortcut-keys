@@ -21,7 +21,6 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `Ctrl + n` - Toggle sidebar visibility
 - `|` - Split editor vertically (Normal mode)
 - `\` - Split editor horizontally (Normal mode)
-- `Ctrl + c` - Close active editor (except in Insert mode)
 
 ### File Explorer
 
