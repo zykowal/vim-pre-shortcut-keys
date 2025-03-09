@@ -71,6 +71,7 @@ A VSCode extension that enhances your coding experience by providing preset shor
 
 ### Code Actions
 
+- `Esc` - No highlight in normal mode
 - `f` - EasyMotion
 - `H` - Move to beginning of line
 - `L` - Move to end of line
@@ -100,7 +101,6 @@ A VSCode extension that enhances your coding experience by providing preset shor
 - `leader + w` - Save file
 - `leader + W` - Save all files
 - `leader + q` - Quit file
-- `leader + s + c` - No highlight
 - `leader + l` - Next Editor
 - `leader + h` - Previous Editor
 
